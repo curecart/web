@@ -1,0 +1,6 @@
+{
+  "name": "Cure Cart | 24-Hour Pharmacy Delivery Varanasi",
+  "description": "Cure Cart is Varanasi's trusted 24-hour pharmaceutical delivery service operating via WhatsApp. Up to 25% discount on 100% genuine certified medicines with doorstep delivery under 24 hours.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

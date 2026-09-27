@@ -1,0 +1,136 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Quincy';
+  src: local('Quincy CF Bold'), local('Quincy CF'), local('QuincyCF-Bold'), local('Quincy-Bold'), local('Quincy');
+  font-weight: 700 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+@layer base {
+  :root {
+    --font-quincy: 'Quincy', 'Quincy CF', 'Fraunces', 'Playfair Display', Georgia, serif;
+    --font-heading: 'Quincy', 'Quincy CF', 'Fraunces', 'Playfair Display', Georgia, serif;
+    --font-caslon: 'Quincy', 'Quincy CF', 'Fraunces', 'Playfair Display', Georgia, serif;
+    --font-sans: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+    --font-hindi: 'Noto Sans Devanagari', 'Poppins', sans-serif;
+
+    /* Cure Cart Light Sky Blue Palette (derived from uploaded logo) */
+    --curecart-deep-blue: #03438A;
+    --curecart-royal-blue: #0284C7;
+    --curecart-cyan: #00A8CC;
+    --curecart-light-sky: #E0F2FE;
+    --curecart-soft-blue: #F0F8FF;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  html, body {
+    scrollbar-width: none !important; /* Firefox */
+    -ms-overflow-style: none !important; /* IE and Edge */
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #FFFFFF;
+    color: #1E293B;
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: geometricprecision;
+  }
+
+  h1, h2, h3, h4, h5, h6, .font-quincy, .font-heading, .font-caslon, .font-anton {
+    font-family: var(--font-quincy);
+    font-weight: 700;
+    letter-spacing: -0.015em;
+  }
+}
+
+.font-quincy {
+  font-family: var(--font-quincy);
+  font-weight: 700;
+}
+
+.font-quincy-bold {
+  font-family: var(--font-quincy);
+  font-weight: 800;
+}
+
+.font-caslon {
+  font-family: var(--font-quincy);
+  font-weight: 700;
+}
+
+.font-caslon-italic {
+  font-family: var(--font-quincy);
+  font-weight: 700;
+  font-style: italic;
+}
+
+.font-anton {
+  font-family: var(--font-quincy);
+  font-weight: 700;
+}
+
+/* Hide scroll lining / scrollbar on the right side while keeping smooth scrolling */
+::-webkit-scrollbar {
+  display: none !important;
+  width: 0 !important;
+  height: 0 !important;
+}
+
+/* Continuous Light Beam Shimmer */
+@keyframes shimmer {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(200%);
+  }
+}
+
+.animate-shimmer {
+  animation: shimmer 2.4s cubic-bezier(0.4, 0, 0.2, 1) infinite;
+}
+
+/* Gentle floating animation for cards & badges */
+@keyframes floatGentle {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+}
+
+.animate-float-gentle {
+  animation: floatGentle 5s ease-in-out infinite;
+}
+
+/* Luminous light-blue glowing pulse */
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow: 0 0 15px rgba(2, 132, 199, 0.25);
+  }
+  50% {
+    box-shadow: 0 0 25px rgba(56, 189, 248, 0.55);
+  }
+}
+
+.animate-glow-pulse {
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+/* Medical background pattern with soft light-blue dots on clean white matching logo bokeh */
+.medical-poster-bg {
+  background-color: #FFFFFF;
+  background-image: 
+    radial-gradient(rgba(2, 132, 199, 0.05) 1px, transparent 1px),
+    radial-gradient(rgba(56, 189, 248, 0.03) 2px, transparent 2px);
+  background-size: 32px 32px, 64px 64px;
+  background-position: 0 0, 16px 16px;
+}
